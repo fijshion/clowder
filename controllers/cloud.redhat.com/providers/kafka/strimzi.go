@@ -348,6 +348,9 @@ func (s *strimziProvider) configureKafkaConnectCluster() error {
 
 	username := getConnectClusterUserName(s.Env)
 
+	initialDelaySeconds := int32(5)
+	timeoutSeconds := int32(60)
+
 	k.Spec = &strimzi.KafkaConnectSpec{
 		Replicas:         &replicas,
 		BootstrapServers: s.getBootstrapServersString(),
@@ -362,6 +365,14 @@ func (s *strimziProvider) configureKafkaConnectCluster() error {
 			"status.storage.replication.factor": "1",
 		},
 		Image: &image,
+		LivenessProbe: &strimzi.KafkaConnectSpecLivenessProbe{
+			InitialDelaySeconds: &initialDelaySeconds,
+			TimeoutSeconds:      &timeoutSeconds,
+		},
+		ReadinessProbe: &strimzi.KafkaConnectSpecReadinessProbe{
+			InitialDelaySeconds: &initialDelaySeconds,
+			TimeoutSeconds:      &timeoutSeconds,
+		},
 	}
 	if !s.Env.Spec.Providers.Kafka.EnableLegacyStrimzi {
 		k.Spec.Tls = &strimzi.KafkaConnectSpecTls{
