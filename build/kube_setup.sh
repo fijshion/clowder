@@ -270,7 +270,7 @@ install_strimzi_operator
 install_cert_manager
 install_prometheus_operator
 install_cyndi_operator
-install_xjoin_operator
+#install_xjoin_operator
 install_elasticsearch_operator
 
 FAILURES=0
