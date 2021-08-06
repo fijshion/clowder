@@ -8,7 +8,7 @@ import (
 
 	crd "github.com/RedHatInsights/clowder/apis/cloud.redhat.com/v1alpha1"
 	"github.com/RedHatInsights/clowder/apis/cloud.redhat.com/v1alpha1/common"
-	strimzi "github.com/RedHatInsights/strimzi-client-go/apis/kafka.strimzi.io/v1beta1"
+	strimzi "github.com/fijshion/strimzi-client-go/apis/kafka.strimzi.io/v1beta2"
 
 	"github.com/RedHatInsights/clowder/controllers/cloud.redhat.com/clowder_config"
 	"github.com/RedHatInsights/clowder/controllers/cloud.redhat.com/config"

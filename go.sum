@@ -137,6 +137,10 @@ github.com/evanphx/json-patch v4.5.0+incompatible/go.mod h1:50XU6AFN0ol/bzJsmQLi
 github.com/evanphx/json-patch v4.9.0+incompatible h1:kLcOMZeuLAJvL2BPWLMIj5oaZQobrkAqrL+WFZwQses=
 github.com/evanphx/json-patch v4.9.0+incompatible/go.mod h1:50XU6AFN0ol/bzJsmQLiYLvXMP4fmwYFNcr97nuDLSk=
 github.com/fatih/color v1.7.0/go.mod h1:Zm6kSWBoL9eyXnKyktHP6abPY2pDugNf5KwzbycvMj4=
+github.com/fijshion/strimzi-client-go v0.24.2 h1:7DxmaN+TtUQR0BVNRxScokecZHQfMOEUHtVtTiA424w=
+github.com/fijshion/strimzi-client-go v0.24.2/go.mod h1:DyfwHCtvayh+HbP5FTdCMDSOT+1AS2TYCsUYrmB10o4=
+github.com/fijshion/strimzi-client-go v0.24.3 h1:VgnVNkpUmiMb5BZPy0kpzH5l5xLWpj942tVt9+2aEdI=
+github.com/fijshion/strimzi-client-go v0.24.3/go.mod h1:DyfwHCtvayh+HbP5FTdCMDSOT+1AS2TYCsUYrmB10o4=
 github.com/form3tech-oss/jwt-go v3.2.2+incompatible h1:TcekIExNqud5crz4xD2pavyTgWiPvpYe4Xau31I0PRk=
 github.com/form3tech-oss/jwt-go v3.2.2+incompatible/go.mod h1:pbq4aXjuKjdthFRnoDwaVPLA+WlJuPGy+QneDUgJi2k=
 github.com/frankban/quicktest v1.11.3 h1:8sXhOn0uLys67V8EsXLc6eszDs8VXWxL3iRvebPhedY=

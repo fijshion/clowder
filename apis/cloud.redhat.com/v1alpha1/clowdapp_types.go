@@ -18,7 +18,7 @@ import (
 	"fmt"
 
 	"github.com/RedHatInsights/clowder/apis/cloud.redhat.com/v1alpha1/common"
-	strimzi "github.com/RedHatInsights/strimzi-client-go/apis/kafka.strimzi.io/v1beta1"
+	strimzi "github.com/fijshion/strimzi-client-go/apis/kafka.strimzi.io/v1beta2"
 	batch "k8s.io/api/batch/v1beta1"
 	v1 "k8s.io/api/core/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"

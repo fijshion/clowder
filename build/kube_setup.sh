@@ -67,7 +67,7 @@ mkdir -p "$DOWNLOAD_DIR"
 
 
 function install_strimzi_operator {
-    STRIMZI_VERSION=0.22.1
+    STRIMZI_VERSION=0.24.0
     STRIMZI_OPERATOR_NS=strimzi
     WATCH_NS="*"
     STRIMZI_TARFILE="strimzi-${STRIMZI_VERSION}.tar.gz"
@@ -100,6 +100,10 @@ function install_strimzi_operator {
     # Set namespaces that operator watches
     yq eval -i "del(.spec.template.spec.containers[0].env.[] | select(.name == \"STRIMZI_NAMESPACE\").valueFrom)" 060-Deployment-strimzi-cluster-operator.yaml
     yq eval -i "(.spec.template.spec.containers[0].env.[] | select(.name == \"STRIMZI_NAMESPACE\")).value = \"$WATCH_NS\"" 060-Deployment-strimzi-cluster-operator.yaml
+
+    yq eval -i "(.spec.template.spec.containers[0].env.[] | select(.name == \"STRIMZI_FULL_RECONCILIATION_INTERVAL_MS\")).value = \"10000\"" 060-Deployment-strimzi-cluster-operator.yaml
+    yq eval -i "(.spec.template.spec.containers[0].resources.limits.cpu) = \"2000m\"" 060-Deployment-strimzi-cluster-operator.yaml
+    yq eval -i "(.spec.template.spec.containers[0].resources.limits.memory) = \"1Gi\"" 060-Deployment-strimzi-cluster-operator.yaml
 
     echo "*** Creating ns ${STRIMZI_OPERATOR_NS}..."
     # if we hit an error, assumption is the Namespace already exists

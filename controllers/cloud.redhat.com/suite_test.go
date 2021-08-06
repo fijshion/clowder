@@ -42,7 +42,7 @@ import (
 	crd "github.com/RedHatInsights/clowder/apis/cloud.redhat.com/v1alpha1"
 	"github.com/RedHatInsights/clowder/controllers/cloud.redhat.com/config"
 	p "github.com/RedHatInsights/clowder/controllers/cloud.redhat.com/providers"
-	strimzi "github.com/RedHatInsights/strimzi-client-go/apis/kafka.strimzi.io/v1beta1"
+	strimzi "github.com/fijshion/strimzi-client-go/apis/kafka.strimzi.io/v1beta2"
 	// +kubebuilder:scaffold:imports
 )
 
